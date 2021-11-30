@@ -26,9 +26,7 @@
 
                 document.oncontextmenu = function() { return false; }
                 document.onmousedown   = function() { return false; }
-            }
 
-            function draw() {
                 background(0);
                
                 imageMode(CENTER);
@@ -43,6 +41,10 @@
                 image(pizd[9], 150, (sin((millis() / 5) + 140) * 10), 50, 50);
                 image(pizd[10], 200, (sin((millis() / 5) + 160) * 10), 50, 50);
                 image(pizd[11], 250, (sin((millis() / 5) + 180) * 10), 50, 50);
+            }
+
+            function draw() {
+                
             }
 
             function windowResized() {

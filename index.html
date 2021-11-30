@@ -20,42 +20,29 @@
             }
 
             function setup() {
-                createCanvas(windowWidth, windowHeight);
-                //cam = createEasyCam();
+                createCanvas(windowWidth, windowHeight, WEBGL);
+                cam = createEasyCam();
                 angleMode(DEGREES);
-                //cam.setViewport([0, 0, w, h]);
 
                 document.oncontextmenu = function() { return false; }
                 document.onmousedown   = function() { return false; }
             }
 
             function draw() {
-               background(0);
+                background(0);
                
-               image(pizd[1], (w / 2) - 250, (h / 2) + sin(millis() / 5) * 10, 50, 50);
-               image(pizd[2], (w / 2) - 200, (h / 2) + (sin((millis() / 5) + 20) * 10), 50, 50);
-               image(pizd[3], (w / 2) - 150, (h / 2) + (sin((millis() / 5) + 40) * 10), 50, 50);
-               image(pizd[4], (w / 2) - 100, (h / 2) + (sin((millis() / 5) + 60) * 10), 50, 50);
-               image(pizd[5], (w / 2) - 50, (h / 2) + (sin((millis() / 5)) * 10), 50, 50);
-               image(pizd[6], w / 2, (h / 2) + (sin((millis() / 5) + 80) * 10), 50, 50);
-               image(pizd[7], (w / 2) + 50, (h / 2) + (sin((millis() / 5) + 100) * 10), 50, 50);
-               image(pizd[8], (w / 2) + 100, (h / 2) + (sin((millis() / 5) + 120) * 10), 50, 50);
-               image(pizd[9], (w / 2) + 150, (h / 2) + (sin((millis() / 5) + 140) * 10), 50, 50);
-               image(pizd[10], (w / 2) + 200, (h / 2) + (sin((millis() / 5) + 160) * 10), 50, 50);
-               image(pizd[11], (w / 2) + 250, (h / 2) + (sin((millis() / 5) + 180) * 10), 50, 50);
-               
-              /*
-               image(pizd[1], 0, (h / 2) + sin(millis() / 5) * 10, 50, 50);
-               image(pizd[2], 50, (h / 2) + (sin((millis() / 5) + 20) * 10), 50, 50);
-               image(pizd[3], 100, (h / 2) + (sin((millis() / 5) + 40) * 10), 50, 50);
-               image(pizd[4], 150, (h / 2) + (sin((millis() / 5) + 60) * 10), 50, 50);
-               image(pizd[5], 200, (h / 2) + (sin((millis() / 5)) * 10), 50, 50);
-               image(pizd[6], 250, (h / 2) + (sin((millis() / 5) + 80) * 10), 50, 50);
-               image(pizd[7], 300, (h / 2) + (sin((millis() / 5) + 100) * 10), 50, 50);
-               image(pizd[8], 350, (h / 2) + (sin((millis() / 5) + 120) * 10), 50, 50);
-               image(pizd[9], 400, (h / 2) + (sin((millis() / 5) + 140) * 10), 50, 50);
-               image(pizd[10], (w / 2) + 200, (h / 2) + (sin((millis() / 5) + 160) * 10), 50, 50);
-               image(pizd[11], (w / 2) + 250, (h / 2) + (sin((millis() / 5) + 180) * 10), 50, 50); */
+                imageMode(CENTER);
+                image(pizd[1], -250, sin(millis() / 5) * 10, 50, 50);
+                image(pizd[2], -200, (sin((millis() / 5) + 20) * 10), 50, 50);
+                image(pizd[3], -150, (sin((millis() / 5) + 40) * 10), 50, 50);
+                image(pizd[4], -100, (sin((millis() / 5) + 60) * 10), 50, 50);
+                image(pizd[5], -50, (sin((millis() / 5)) * 10), 50, 50);
+                image(pizd[6], 0, (sin((millis() / 5) + 80) * 10), 50, 50);
+                image(pizd[7], 50, (sin((millis() / 5) + 100) * 10), 50, 50);
+                image(pizd[8], 100, (sin((millis() / 5) + 120) * 10), 50, 50);
+                image(pizd[9], 150, (sin((millis() / 5) + 140) * 10), 50, 50);
+                image(pizd[10], 200, (sin((millis() / 5) + 160) * 10), 50, 50);
+                image(pizd[11], 250, (sin((millis() / 5) + 180) * 10), 50, 50);
             }
 
             function windowResized() {

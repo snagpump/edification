@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>snagpump</title>
+        <title>В назидание</title>
         <meta charset="utf-8">
         <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
         <script src="https://freshfork.github.io/p5.EasyCam/p5.easycam.js"></script>
@@ -10,7 +10,7 @@
         <script>
             let w = window.innerWidth;
             let h = window.innerHeight;
-            let img_size = 50;
+            let img_size = 25;
             pizd = [];
 
             function preload() {
@@ -21,7 +21,7 @@
 
             function setup() {
                 createCanvas(windowWidth, windowHeight, WEBGL);
-                frameRate(60);
+                //rameRate(60);
                 cam = createEasyCam();
                 angleMode(DEGREES);
 
@@ -33,17 +33,18 @@
 
             function draw() {
                 imageMode(CENTER);
-                image(pizd[1], -250, sin(millis() / 5) * 10, 50, 50);
-                image(pizd[2], -200, (sin((millis() / 5) + 20) * 10), 50, 50);
-                image(pizd[3], -150, (sin((millis() / 5) + 40) * 10), 50, 50);
-                image(pizd[4], -100, (sin((millis() / 5) + 60) * 10), 50, 50);
-                /image(pizd[5], -50, (sin((millis() / 5)) * 10), 50, 50);
-                image(pizd[6], 0, (sin((millis() / 5) + 80) * 10), 50, 50);
-                image(pizd[7], 50, (sin((millis() / 5) + 100) * 10), 50, 50);
-                image(pizd[8], 100, (sin((millis() / 5) + 120) * 10), 50, 50);
-                image(pizd[9], 150, (sin((millis() / 5) + 140) * 10), 50, 50);
-                image(pizd[10], 200, (sin((millis() / 5) + 160) * 10), 50, 50);
-                image(pizd[11], 250, (sin((millis() / 5) + 180) * 10), 50, 50);
+                
+                image(pizd[1], img_size * -5, sin(millis() / 5) * 10, img_size, img_size);
+                image(pizd[2], img_size * -4, (sin((millis() / 5) + 20) * 10), img_size, img_size);
+                image(pizd[3], img_size * -3, (sin((millis() / 5) + 40) * 10), img_size, img_size);
+                image(pizd[4], img_size * -2, (sin((millis() / 5) + 60) * 10), img_size, img_size);
+                image(pizd[5], img_size * -1, (sin((millis() / 5)) * 10), img_size, img_size);
+                image(pizd[6], img_size * 0, (sin((millis() / 5) + 80) * 10), img_size, img_size);
+                image(pizd[7], img_size * 1, (sin((millis() / 5) + 100) * 10), img_size, img_size);
+                image(pizd[8], img_size * 2, (sin((millis() / 5) + 120) * 10), img_size, img_size);
+                image(pizd[9], img_size * 3, (sin((millis() / 5) + 140) * 10), img_size, img_size);
+                image(pizd[10], img_size * 4, (sin((millis() / 5) + 160) * 10), img_size, img_size);
+                image(pizd[11], img_size * 5, (sin((millis() / 5) + 180) * 10), img_size, img_size);
             }
 
             function windowResized() {
